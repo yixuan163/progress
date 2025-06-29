@@ -1,0 +1,39 @@
+server:
+  #端口号
+  port: 9086
+
+  servlet:
+    context-path: /progress
+spring:
+  datasource:
+    name: test
+    url: jdbc:mysql://192.168.25.128:3306/progress?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: admin
+    driver-class-name: com.mysql.jdbc.Driver
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.huawei.progress.bean
+
+logging:
+  path:
+    progress
+  # 不指定路径在当前项目下生成progress.log日志
+  # 可以指定完整的路径；
+  file:
+    progress.log
+
+  level:
+    com:
+      huawei:
+        progress:
+          mapper:
+            info
+
+
+
+
+
+
+
